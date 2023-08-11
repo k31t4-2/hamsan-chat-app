@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
-import SignIn from './components/SignIn'
-import Main from './components/Main';
+import SignIn from './components/login/SignIn'
+import Main from './components/message/Main';
 import  {signInEnabled}  from "../config.json";
 
 function App() {

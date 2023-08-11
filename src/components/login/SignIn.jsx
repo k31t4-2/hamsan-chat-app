@@ -35,7 +35,6 @@ export default function SignIn(props) {
   const [string, setString] = useState("")
   const [disabled, setDisabled] = useState(true)
   const [isEditing,setIsEditing] = useState(false)
-  console.log({isEditing,disabled,string});
 
 // ボタンを非活性化にする--------------------
   useEffect(() => {
@@ -105,6 +104,7 @@ export default function SignIn(props) {
           <Typography component="h1" variant="h5">
             ようこそ
           </Typography>
+
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
@@ -115,8 +115,8 @@ export default function SignIn(props) {
               name="name"
               value={string}
               onChange={onChange}
-              onKeyDown={onKeyDown}
               autoFocus
+              onKeyDown={onKeyDown}
               onCompositionStart={onCompositionStart}
               onCompositionEnd={onCompositionEnd}
             />
